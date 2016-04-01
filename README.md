@@ -29,8 +29,21 @@ My camera supports "Alarm Server". In case of alarm (detected motion) it will se
  
 ## Alarm Server
 
- 1. cd to directory where you are going to deploy AlarmServer: `cd /opt`
- 2. Clone Alarm Server locally 
+ 1. cd to directory where server will be deployed: `cd /opt`
+ 2. Clone Alarm Server locally: `git clone https://github.com/solvek/CameraTrigger.git`
+ 3. cd to Server directory: `cd CameraTrigger`
+ 4. Configure parameters at the beginning of `index.js` file. Especially pay attention to `MONITOR_ID` constant.
+ 6. Start the Server: `node index.js`
+ 
+ You may want to setup starting server on system startup, for this do the following:
+ 
+ 1. Create starting service script: `sudo nano /etc/init/ServerRouter.conf`
+ 2. Copy my upstart script from [here](https://github.com/solvek/CameraTrigger/blob/master/ServerRouter.conf)
+ 3. Correct paths to node, `index.js` script, output log
+ 4. Save
+ 5. Check syntax `sudo init-checkconf /etc/init/ServerRouter.conf`
+ 6. Start service: `sudo service ServerRouter start`
+ 7. Check log: `cat ~/ServerRouter.log`
 
 # Alarm Server Protocol
 
