@@ -7,8 +7,6 @@ My camera supports "Alarm Server". In case of alarm (detected motion) it will se
 
 # Installation
 
-# Configuration
-
 ## Camera
 
  1. Activate "Alarm Server" on camera
