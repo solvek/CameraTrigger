@@ -1,5 +1,6 @@
 /**
  * Created by solvek on 01.04.16.
+ * Script simulates work of ZMTrigger service. It does nothing but outputs to console everything it receives.
  */
 
 var net = require('net');

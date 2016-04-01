@@ -1,5 +1,6 @@
 /**
  * Created by solvek on 01.04.16.
+ * Script emulates sending info from camera: start event then in 5 sec stop event
  */
 
 var net = require('net');
