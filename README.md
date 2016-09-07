@@ -35,6 +35,18 @@ My camera supports "Alarm Server". In case of alarm (detected motion) it will se
  
  You may want to setup starting server on system startup, for this do the following:
  
+ For Ubuntu 16 (Basing on [this](https://www.axllent.org/docs/view/nodejs-service-with-systemd/) post)
+ 
+ 1. Create service file: `sudo nano /etc/systemd/system/ServerRouter.service`
+ 2. Copy my upstart script from [here](https://github.com/solvek/CameraTrigger/blob/master/ServerRouter.service)
+ 3. Correct paths to node and `index.js` script
+ 4. Save
+ 5. Enable the service: `sudo systemctl enable ServerRouter.service`
+ 6. Start the servcie: `sudo systemctl start ServerRouter.service`
+ 7. Verify it is running: `sudo systemctl status ServerRouter.service`
+ 
+ For Ubuntu before 16
+ 
  1. Create starting service script: `sudo nano /etc/init/ServerRouter.conf`
  2. Copy my upstart script from [here](https://github.com/solvek/CameraTrigger/blob/master/ServerRouter.conf)
  3. Correct paths to node, `index.js` script, output log
